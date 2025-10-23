@@ -1,37 +1,38 @@
 .footer {
-    margin-top: 12px;
-    margin: 10px 10px 10px;
-    border: solid 0.01px rgb(255, 209, 188);
-     display: flex;
+    margin: 3px;
+    border-top: solid 0.01px rgb(255, 209, 188);
+    display: flex;
     justify-content: space-between;
     align-items: end;
     font-size: 15px;
 }
-.contact{
-   display: flex;
-   flex-direction: column;
-   row-gap: 5px;
-   align-items: center;
-   padding: 10px 0px 2px 15px;
-   
-   
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 10px;
 }
 
-.copyright{
-    padding-right: 15px;
-    padding-bottom: 10px;
+.contact-text {
+    padding-left: 10%;
+    text-decoration: solid;
+    text-decoration: underline;
 }
 
-.contact-text{
-text-decoration: solid;
-text-decoration: underline;
+.copyright {
+    padding-right: 7px;
+    padding-bottom: 20px;
 }
 
-.contact-number, .contact-mail{
+.contact-number,
+.contact-mail {
     display: flex;
     align-items: center;
     column-gap: 4px;
 }
-.phone-icon, .mail-icon{
-    width: 30px;
+
+.phone-icon,
+.mail-icon {
+    width: 30px;    
 }
