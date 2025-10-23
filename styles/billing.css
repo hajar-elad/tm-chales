@@ -1,5 +1,5 @@
 .main {
-    margin: 142px 10px 10px;
+    margin: 149px 3px 3px;
     border: solid 0.01px rgb(255, 209, 188);
     padding: 32px;
     padding-top: 21px;
@@ -64,6 +64,15 @@ input {
     flex-direction: column;
     justify-content: start;
     gap: 12px;
+}
+
+@media (max-width: 750px) {
+
+    .recap-cart {
+       display: none;
+        /* this says when the page is at 750px or less show only 2 products pr row */
+    }
+
 }
 
 .cart-items {
