@@ -29,7 +29,14 @@
     text-align: center;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 549px) {
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 750px) {
 
     .grid-container {
         grid-template-columns: 1fr 1fr;
