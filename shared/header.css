@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    top: 3px;
+    top: 0;
     left: 3px;
     right: 3px;
     height: 83px;
@@ -21,21 +21,26 @@
 }
 
 .logo {
-   
     width: 75px;
     border: solid 0.01px rgb(194, 149, 128);
 }
 
+.brand-name-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
 .brand-name {
     font-size: x-large;
-    display: inline;
     font-style: italic;
 
 }
 
 .brand-name-suite {
     font-style: italic;
-    display: inline;
 }
 
 .cartIcon {
@@ -47,6 +52,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes change-price-fontsize {
+    0% {
+        font-size: x-large;
+    }
+
+    100% {
+
+        font-size: 40px;
+    }
+}
+
+.free-delivery-banner,
+.price-free-delivery {
+    background: linear-gradient(to right, rgb(192, 118, 84), rgb(131, 67, 37), rgb(8, 8, 24));
+    -webkit-background-clip: text;
+    /* For WebKit browsers like Chrome, Safari */
+    background-clip: text;
+    color: transparent;
+    font-size: xx-large;
+}
+
+.price-free-delivery {
+    animation: change-price-fontsize 4s linear infinite;
+}
+
+@media (max-width: 750px) {
+    
+    .free-delivery-banner {
+        font-size: 100%;
+    }
+
 }
 
 .searchIcon {
