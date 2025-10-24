@@ -53,9 +53,7 @@
     }
 }
 
-.product-container {
-    border: solid 0.01px rgb(255, 209, 188);
-    overflow: hidden;
+.product-container { 
     padding: 3px;
 }
 
