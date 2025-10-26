@@ -32,6 +32,8 @@ function listCartItems(){
                         <div class="quantity">Quantité: ${cartItem.quantity}</div>
                     </div>
                     <button class="remove-item js-remove-item" data-product-id=${product.id}>retirer</button>
+                    <div class="modal-container-hide js-modal-container">
+                    </div>
                   </div>`
         }})
     })

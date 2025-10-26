@@ -1,9 +1,6 @@
 .main {
-    margin: 149px 3px 3px;
-    border: solid 0.01px rgb(255, 209, 188);
     padding: 32px;
     padding-top: 21px;
-    min-height: 380px;
 }
 
 .grids-container {

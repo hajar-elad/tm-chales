@@ -14,9 +14,12 @@
 }
 
 @media (max-width: 750px) {
-    
+
     .home-link {
         display: none;
     }
 
+    .menu-bar {
+        font-size: 14px;
+    }
 }

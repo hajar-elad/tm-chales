@@ -14,6 +14,8 @@ export function listProducts(category){
                     <div class="product-price">${(product.price).toFixed(2)} DHS</div>
                 </div>
                 <button class="add-to-cart-btn" data-product-id=${product.id}>Ajouter Au Panier</button>
+                <div class="modal-container-hide js-modal-container">  
+                </div>
             </div>`
        }
     })

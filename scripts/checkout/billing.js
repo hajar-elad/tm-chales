@@ -9,7 +9,8 @@ function listingItemsBilling(){
 
        products.forEach((product) => {
            if (cartItem.id === product.id){
-               html += `<img class="product-image js-product-image" data-product-id=${product.id} src="${product.image} ">`
+               html += `<img class="product-image js-product-image" data-product-id=${product.id} src="${product.image} ">
+                        <div class="modal-container-hide js-modal-container"></div>`
         }})
     })
     document.querySelector('.cart-items')
