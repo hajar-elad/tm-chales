@@ -12,6 +12,11 @@
         gap: 12px;
     }
 
+    .brand-name-container {
+
+        display: none;
+
+     }
 }
 
 .category-container {

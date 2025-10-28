@@ -37,11 +37,11 @@ const category = 'jerseyChales';
                const productId = image.dataset.productId;
                 createModal(productId);
        
-         const modalContainer = document.querySelector('.js-modal-container');
+            const modalContainer = document.querySelector(`.js-modal-container-${productId}`);
                modalContainer.classList.add('modal-container-show');
-         const closeModal = document.querySelector('.js-close-modal'); 
-         closeModal.addEventListener('click', () => {
-         modalContainer.classList.remove('modal-container-show');})
+            const closeModal = document.querySelector(`.js-close-modal-${productId}`); 
+               closeModal.addEventListener('click', () => {
+               modalContainer.classList.remove('modal-container-show');})
         
                })
         })
@@ -53,7 +53,7 @@ const category = 'jerseyChales';
 
       function matchingProductSearch(value){
             products.forEach((product) => {
-                  const productContainer = document.querySelector(`.product-container-${product.id}`);
+                  const productContainer = document.querySelector(`.js-product-container-${product.id}`);
                   if(product.category === category && !(product.name.includes(value))){
                         productContainer.style.display = 'none';
                   }

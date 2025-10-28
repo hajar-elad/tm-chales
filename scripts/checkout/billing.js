@@ -9,8 +9,10 @@ function listingItemsBilling(){
 
        products.forEach((product) => {
            if (cartItem.id === product.id){
-               html += `<img class="product-image js-product-image" data-product-id=${product.id} src="${product.image} ">
-                        <div class="modal-container-hide js-modal-container"></div>`
+               html += `<div class="product-container js-product-container-${product.id}">
+                        <img class="product-image js-product-image " data-product-id=${product.id} src="${product.image} ">
+                        <div class="modal-container-hide js-modal-container-${product.id}"></div>
+                        </div>`
         }})
     })
     document.querySelector('.cart-items')
@@ -44,11 +46,11 @@ function showModal(){
            const productId = image.dataset.productId;
             createModal(productId);
    
-     const modalContainer = document.querySelector('.js-modal-container');
-           modalContainer.classList.add('modal-container-show');
-     const closeModal = document.querySelector('.js-close-modal'); 
-     closeModal.addEventListener('click', () => {
-     modalContainer.classList.remove('modal-container-show');})
+    const modalContainer = document.querySelector(`.js-modal-container-${productId}`);
+               modalContainer.classList.add('modal-container-show');
+         const closeModal = document.querySelector(`.js-close-modal-${productId}`); 
+         closeModal.addEventListener('click', () => {
+         modalContainer.classList.remove('modal-container-show');})
     
            })
     })

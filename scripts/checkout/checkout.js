@@ -32,20 +32,20 @@ function listCartItems(){
                         <div class="quantity">Quantité: ${cartItem.quantity}</div>
                     </div>
                     <button class="remove-item js-remove-item" data-product-id=${product.id}>retirer</button>
-                    <div class="modal-container-hide js-modal-container">
+                    <div class="modal-container-hide js-modal-container-${product.id}">
                     </div>
                   </div>`
         }})
     })
-    }
-    document.querySelector('.products-container')
+    } 
+    document.querySelector('.grid-container')
        .innerHTML = html;
     
     document.querySelector('.js-cart-quantity')
           .innerHTML = getNbrOfItems();
 }
 
-// Display cart items 
+// Display cart items  
 listCartItems();
 
 
@@ -58,11 +58,11 @@ function showModal(){
            const productId = image.dataset.productId;
             createModal(productId);
    
-     const modalContainer = document.querySelector('.js-modal-container');
-           modalContainer.classList.add('modal-container-show');
-     const closeModal = document.querySelector('.js-close-modal'); 
-     closeModal.addEventListener('click', () => {
-     modalContainer.classList.remove('modal-container-show');})
+        const modalContainer = document.querySelector(`.js-modal-container-${productId}`);
+               modalContainer.classList.add('modal-container-show');
+         const closeModal = document.querySelector(`.js-close-modal-${productId}`); 
+         closeModal.addEventListener('click', () => {
+         modalContainer.classList.remove('modal-container-show');})
     
            })
     })

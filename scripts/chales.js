@@ -7,16 +7,16 @@ export function listProducts(category){
     products.forEach((product) => {
        if(product.category === category){
            html += `
-        <div class="product-container product-container-${product.id}">
+        <div class="product-container js-product-container-${product.id}">
                 <img class="product-image js-product-image" src="${product.image}"  data-product-id=${product.id}>
                 <div class="product-infos">
                     <div class="product-name">${product.name}</div>
                     <div class="product-price">${(product.price).toFixed(2)} DHS</div>
                 </div>
                 <button class="add-to-cart-btn" data-product-id=${product.id}>Ajouter Au Panier</button>
-                <div class="modal-container-hide js-modal-container">  
+                <div class="modal-container-hide js-modal-container-${product.id}">  
                 </div>
-            </div>`
+        </div>`
        }
     })
     return html;
@@ -37,14 +37,16 @@ export function createModal(productId){
                     <div class="modal-name">${product.name}</div>
                     <div class="modal-price">${(product.price).toFixed(2)} DHS</div>
                 </div>
-                <button class="close-modal js-close-modal">X</button>
+                <button class="close-modal js-close-modal-${product.id}">X</button>
 
             </div>`
+
+            document.querySelector(`.js-modal-container-${product.id}`)
+                .innerHTML = html;
          }
     })
 
     //Create The Modal
-    document.querySelector('.modal-container-hide')
-       .innerHTML = html;
+    
 }
 

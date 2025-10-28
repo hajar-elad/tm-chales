@@ -21,7 +21,7 @@
 
 }
 
-.products-container,
+.grid-container,
 .payment-summary {
     padding: 12px;
     border: solid 0.01px rgb(248, 182, 151);
@@ -32,7 +32,6 @@
     column-gap: 25px;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .Product-infos {
@@ -44,6 +43,7 @@
     height: 170px;
     border-radius: 10px;
     padding: 3px;
+    cursor: pointer;
 }
 
 .empty-bascket-text {

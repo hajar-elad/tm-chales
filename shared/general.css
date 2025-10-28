@@ -13,10 +13,10 @@ body{
 .main {
     margin: 149px 3px 3px;
     padding: 15px;
-    min-height: max-content;
+    min-height: 100vh; /* takes up full screen ; vh stands for "viewport height," and 100vh represents 100% */
 }
 
- a:link, a:visited {
+ a:link, a:visited { 
     color: rgb(34, 3, 2);
  }
  

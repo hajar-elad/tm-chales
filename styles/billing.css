@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 17px;
-}
+} 
 
 .billing,
 .payement,
@@ -68,6 +68,11 @@ input {
     .recap-cart {
        display: none;
         /* this says when the page is at 750px or less show only 2 products pr row */
+    }
+
+    .submitted{
+        flex-direction: column;
+        gap: 20px;
     }
 
 }
